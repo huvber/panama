@@ -1,0 +1,101 @@
+body {
+  background: linear-gradient(to top right, #00384b 0%, #6EBD8F 33%, #009fc0 66%, #e94268 100%);
+  height: 100vh;
+  background-size: 200% 200%;
+  animation: backgroundAnimation 30s ease infinite;
+  display: flex;
+  justify-content: center;
+}
+@keyframes backgroundAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.bar {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 768px) {
+  .bar {
+    margin-top: 18px;
+    margin-bottom: 18px;
+  }
+}
+.mainc {
+  top: 20px;
+  width: 80%;
+  position: relative;
+  background-image: url(../img/lonlng.png);
+  background-repeat: no-repeat;
+  background-position: center 30%;
+  background-size: 65% auto;
+}
+@media screen and (max-width: 768px) {
+  .mainc {
+    width: 80%;
+    margin-top: 0px;
+    background-size: 150% auto;
+  }
+}
+.mainc::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(../img/panama.png);
+  background-position: center 30%;
+  background-repeat: no-repeat;
+  background-size: 65% auto;
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+  z-index: -1;
+}
+@media screen and (max-width: 768px) {
+  .mainc::after {
+    background-size: 150% auto;
+  }
+}
+.mainc .subtitle {
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (max-width: 768px) {
+  .mainc .subtitle {
+    width: 100%;
+  }
+}
+.mainc .bottom {
+  position: absolute;
+  top: 60%;
+  width: 40%;
+  left: 30%;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .mainc .bottom {
+    width: 100%;
+    top: 57%;
+    left: 0;
+  }
+}
+.mainc .bottom a img {
+  margin-top: 40px;
+  width: 60%;
+}
+@media screen and (max-width: 768px) {
+  .mainc .bottom a img {
+    width: 80%;
+  }
+}
+.invisible {
+  display: none;
+}
